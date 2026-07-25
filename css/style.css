@@ -1,0 +1,155 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:0;
+    animation:fadePage .8s ease;
+}
+
+/* Navbar */
+
+.navbar{
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+    animation:slideDown .8s ease;
+}
+
+/* Hero Section */
+
+.hero{
+    height:550px;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px 0 30px;
+}
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.45s;
+    animation:fadeIn .8s ease;
+}
+
+.card:hover{
+    transform:translateY(-12px) rotate(1deg);
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+/* Gallery Images */
+
+.art-image{
+    height:320px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover .art-image{
+    transform:scale(1.08);
+}
+
+/* Individual Images */
+
+img{
+    border-radius:15px;
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.btn-primary:hover{
+    box-shadow:0 0 20px rgba(13,110,253,.5);
+}
+
+.btn-warning{
+    animation:pulse 2s infinite;
+}
+
+/* Footer */
+
+footer{
+    background:#212529;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+    box-shadow:0 -8px 20px rgba(0,0,0,.25);
+}
+
+/* Page Fade */
+
+@keyframes fadePage{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* Card Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Navbar Animation */
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-80px);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+
+/* Hero Button Animation */
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
